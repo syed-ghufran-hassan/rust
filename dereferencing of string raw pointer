@@ -1,0 +1,10 @@
+fn main() {
+    let mut a = String::from("Ghufran");
+    println!("Value of string is {}", a);
+    println!("The reference is {:p}",&a );
+    let ref1 = &mut a as *mut String;
+    unsafe{
+    println!("Address of reference to string is {}",*ref1);
+    }
+ 
+}
