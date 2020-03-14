@@ -1,0 +1,13 @@
+fn main() {
+ 
+let num1:i8  = 5;
+let num2:i8  = 8;
+ 
+let result1 = num1 << 2; // left shift 5 by 2 places
+let result2 = num2 >> 3; // right shift by 3 places
+let result3 = !num2;
+ 
+println!("num1 by 2 places left shift is {}", result1);
+println!("num2 by 3 places right shift is {}", result2);
+println!("performing not operation on num2 is {}", result3);
+}
