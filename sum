@@ -1,0 +1,29 @@
+//taking integers as input and then summing them up to produce sum.
+use std::io;
+ 
+fn main() {
+ 
+let mut sum = 0;
+ 
+let mut _x = String::new();
+ 
+ 
+ 
+io::stdin().read_line(&mut _x).ok().expect("read error");
+ 
+_x = _x.trim().to_string(); 
+for y in _x.chars()
+ 
+{
+ 
+let mut z:i8 = y.to_string().parse().ok().expect("parse error");
+ 
+println!("Z: {}", z);
+ 
+sum += z;
+ 
+}
+ 
+println!("{}", sum);
+ 
+}
