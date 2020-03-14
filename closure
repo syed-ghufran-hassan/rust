@@ -1,0 +1,17 @@
+fn main()
+{
+  let num1 = 3;
+let closure_prime = |num1| {
+   if num1%2!=0 
+   {
+    println!("{} is prime number",num1);
+   }
+    else
+  {
+    println!("{} is not a prime number", num1);
+  }
+  };
+ 
+  closure_prime(num1);
+        
+}
