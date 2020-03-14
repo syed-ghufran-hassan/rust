@@ -1,8 +1,0 @@
-fn main() {
- 
-  
-    let mut num1 = vec![1,5,2,6];
-    
-    num1.sort();
-    println!("{:?}",num1);
-    }
