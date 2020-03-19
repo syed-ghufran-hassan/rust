@@ -1,0 +1,18 @@
+n main(){
+ let mut v: Vec<f32> = Vec::new();
+ println!("Input numbers");
+ let mut g:f32 = read!();
+ while g!=0.0 
+ {
+    v.push(g);
+    g = g - 1.0;
+ }
+ println!("{:?}",v);
+ 
+ while g!=10.0 
+ {
+   v.pop();
+   g = g + 1.0;
+ }
+ println!("{:?}",v);
+}
