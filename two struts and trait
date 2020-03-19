@@ -1,0 +1,62 @@
+Checking if two structs fulfil the trait required
+pub trait Criteria
+{
+   fn education(&self) -> String;
+   fn language(&self) -> String;
+}
+
+pub struct Child1
+{
+  pub education: String,
+  pub language: String,
+}
+
+pub struct Child2
+{
+pub education: String,
+pub language: String,
+}
+
+impl Criteria for Child1
+{
+  fn education(&self) -> String
+  {
+    String::from("Primary Education")
+  }
+  fn language(&self) -> String
+  {
+    String::from("Bilingual")
+  }
+}
+impl Criteria for Child2
+{
+  fn education(&self) -> String
+  {
+    String::from("Primary Education")
+  }
+  fn language(&self) -> String
+  {
+    String::from("Bilingual")
+  }
+}
+
+fn main()
+{
+let child1 = Child1 {
+  education: String::from("Primary Education"),
+  language: String::from("Bilingual"),
+  };
+  let child2 = Child2{
+  education: String::from("Primary Education"),
+  language: String::from("Bilingual"),
+    };
+    if child1.education() == child2.education() && child1.language() == child2.language()
+    {
+      println!("Primary Education and Bilingual language criteria fulfilled");
+    }
+    else
+    {
+      println!("Unmatched");
+    }
+        
+}
