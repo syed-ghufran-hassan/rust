@@ -1,0 +1,46 @@
+//Summarizing Summary trait for newsarticle and twitter summary
+pub trait Summary 
+{
+   fn summarize(&self) -> String;
+}
+ 
+pub struct Newsarticle
+{
+  pub author: String,
+  pub content: String,
+}
+ 
+pub struct Twitter
+{
+  pub username: String,
+  pub content: String,
+}
+ 
+impl Summary for NewsArticle
+{
+  fn summarize(&self) -> String
+  {
+    format!("{}, by {} ", self.content, self.author)
+  }
+}
+ 
+impl Summary for Twitter
+{
+  fn summarize(&self) -> String
+  {
+    format!("{}, by {} ", self.content, self.username)
+  }
+}
+fn main()
+{
+let tweet = Twitter {
+  username: String::from("electronics learning"),
+  content: String::from("ESP32 interfacing"),
+  };
+  let newsarticle = NewsArticle {
+    author: String::from("electronics learning by Ghufran"),
+    content: String::from("ESP32 interfacing with MQTT protocol"),
+    };
+  println!("1 new tweet: {}", tweet.summarize());
+  println!("latest article: {}", newsarticle.summarize());
+}
