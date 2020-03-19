@@ -1,0 +1,18 @@
+fn add_one(num: Option<i32>) -> Option<i32>
+ {
+   match num
+   {
+     Some(a)  => Some(a + 1),
+     None => None, 
+   }
+ } 
+fn main() 
+{
+    
+    let value1  = Some(5);
+    let value2  = None;
+    let result = add_one(value1);
+    let result2 = add_one(value2);
+    println!("{:?}", result);
+    println!("{:?}", result2);   
+}
