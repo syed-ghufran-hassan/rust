@@ -1,0 +1,20 @@
+ 
+//printing sum of rectangle
+ 
+#[derive(Debug)]
+ 
+ struct Rectangle {
+ width: i16,
+ height: i16
+ }
+ 
+ 
+fn main() {
+    let rec1 =  Rectangle {width: 50, height:150};
+    println!("sum is {}",sum(&rec1));
+}
+ 
+fn sum(rectangle: &Rectangle) -> i16
+{
+    rectangle.width + rectangle.height
+}
