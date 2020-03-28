@@ -1,0 +1,25 @@
+#[derive(Debug)]
+ 
+ struct Student {
+ Name: String,
+ Grade: String,
+ Age: i8,
+ Percentage: f32,
+ }
+impl Student {
+fn new() -> Student {
+Student {Name: String::from("Ghufran"), Grade: String::from("A"), Age: 27, Percentage: 74.9}
+}
+fn PercentageShower(&self) -> f32 {
+       self.Percentage
+}
+fn details(&self) -> String{
+        return format!("Name {} Grade {}, Age {}, Percentage {}", self.Name, self.Grade, self. Age, self.Percentage);
+    }
+}
+fn main() {
+    let studentdetails =  Student::new();
+    println!("{:#?}",studentdetails); 
+    println!("Percentage is {}",studentdetails.PercentageShower());
+    println!("Function is {}", studentdetails.details());
+}
