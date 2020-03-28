@@ -1,0 +1,30 @@
+ 
+//using tuple 
+ 
+#[derive(Debug)]
+use std::io;
+ 
+ struct Person {
+ Name: String,
+ Age: i8,
+ Country: String
+ }
+ 
+fn main() {
+    println!("Print Name");
+    let mut name = String::new(); 
+    io::stdin().read_line(&mut name).ok().expect("read error");
+    //let mut name:i8 = name1.trim().parse().ok().expect("parse error");
+    println!("Print Age");
+    let mut age1= String::new(); 
+    io::stdin().read_line(&mut age1).ok().expect("read error");
+    let mut age:i8 = age1.trim().parse().ok().expect("parse error");
+    println!("Print Country Name");
+    let mut country = String::new(); 
+    io::stdin().read_line(&mut country).ok().expect("read error");
+    let person =  Person {Name: name, Age: age, Country:country};
+    let cluster:(String,i8,String) = (person.Name, person.Age, person.Country);
+    println!("Name is {}",cluster.0);
+    println!("Age is {}",cluster.1);
+    println!("Country is {}",cluster.2 );    
+}
