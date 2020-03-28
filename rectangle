@@ -1,0 +1,12 @@
+#[derive(Debug)]
+ 
+ struct Rectangle {
+ width: i8,
+ height: i16
+ }
+ 
+ 
+fn main() {
+    let rec1 =  Rectangle {width: 50, height:150};
+    println!("height is {}",rec1.height);
+}
