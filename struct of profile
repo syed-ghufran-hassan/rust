@@ -1,0 +1,16 @@
+#[derive(Debug)]
+ 
+ struct Student {
+ Name: String,
+ Email: String,
+ Phonenumber: i64,
+ Gender: String,
+ }
+ 
+ 
+fn main() {
+    let studentdetails1 =  Student {Name: String::from("Ghufran"), Email: String::from("syedghufranhassan@gmail.com"), Phonenumber: 03431273735, Gender: String::from("Male")};
+    let studentdetails2 =  Student {Name: String::from("Ghufran"), Email: String::from("syedghufranhassan@gmail.com"), Phonenumber: 03431273735, Gender: String::from("Male")};
+    println!("{:#?}",studentdetails2); 
+    println!("Email is {}",studentdetails1.Email);
+}
