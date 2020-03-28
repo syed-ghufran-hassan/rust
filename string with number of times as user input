@@ -1,0 +1,18 @@
+//print string with number of times as user input 
+use std::io;
+fn main() 
+{
+    println!("Print Name");
+    let mut name = String::new(); 
+    io::stdin().read_line(&mut name).ok().expect("read error");
+   
+    println!("Print Number");
+    let mut number1 = String::new(); 
+    io::stdin().read_line(&mut number1).ok().expect("read error");
+    let mut number:i8 = number1.trim().parse().ok().expect("parse error");
+    while number!=0
+    {
+        print!("{}",name.trim());   
+        number = number - 1;
+    }
+}
