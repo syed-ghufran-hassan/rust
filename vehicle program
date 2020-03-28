@@ -1,0 +1,28 @@
+enum Direction
+ {
+       forward,
+       backward,
+       left,
+       right,
+ } 
+ fn check_direction(direction: Direction) -> i8
+ {
+   match direction
+   {
+     Direction::forward => {println!("Vehicle is moved forward");
+                            1},
+     Direction::backward => {println!("Vehicle is moved backward");
+                                  2},
+     Direction::left => {println!("Vehicle is moved left");
+                                  3},
+     Direction::right => {println!("Vehicle is moved right");
+                            4},
+   }
+ } 
+fn main() 
+{
+   check_direction(Direction::forward);
+   check_direction(Direction::backward);
+   check_direction(Direction::left); 
+   check_direction(Direction::right);
+}
