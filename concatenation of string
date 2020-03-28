@@ -1,0 +1,18 @@
+/*concatenation of string*/
+
+#[macro_use]
+extern crate text_io; 
+ 
+ 
+fn main() {
+    let x = String::from("Pakistan");
+    concatenation(x);
+}
+ 
+fn concatenation(mut x:String)
+{
+    
+    x.push_str(" Zindabad");
+    println!("{}",x);
+}
+ 
