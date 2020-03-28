@@ -1,0 +1,35 @@
+#[derive(Debug)]
+ 
+ struct Triangle {
+ side1: i16,
+ side2: i16,
+ side3: i16
+ }
+ 
+ impl Triangle{
+     fn sum(&self) -> i16
+     {
+         self.side1 + self.side2 + self.side3
+     }
+     fn greater(&self) -> i16
+     {
+         if self.side3 > self.side2 && self.side3 > self.side1
+         {
+             println!("Greater portion is {}", self.side3);
+         }
+         else
+         {
+             println!("No greater side");
+         }
+         self.side3
+        
+     }
+ }
+ 
+ 
+fn main() {
+    let triangle =  Triangle {side1: 50, side2:150, side3:200};
+    println!("sum is {}", triangle.sum());
+      triangle.greater();
+ 
+}
