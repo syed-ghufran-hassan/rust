@@ -1,0 +1,59 @@
+/*printing symbols*/
+#[macro_use]
+extern crate text_io; 
+ 
+fn main() {
+ 
+    println!("How many lines");
+ 
+    let mut num1:i8 = read!();
+ 
+    let mut num2: i8 = 0;
+ 
+    let mut num3: i8 = 0;
+ 
+    let mut num4: i8 = 0;  //edited
+ 
+    num4 = num1;                //edited
+ 
+    let symbol = '*';
+ 
+    'outer: loop {
+ 
+        
+ 
+        'inner: loop {
+ 
+            print!("{}",symbol);
+ 
+            num3 = num3 + 1;
+ 
+            if num3>num4-1
+ 
+            {
+ 
+               break 'inner;
+ 
+            }
+ 
+        }
+ 
+        println!("");   //edited
+ 
+        num3=0;  //edited
+ 
+        num4=num4-1;  //edited
+ 
+        num2 = num2 + 1;
+ 
+        if num2==num1  //edited
+ 
+               {
+ 
+        break 'outer;
+ 
+      }
+ 
+    }
+ 
+}
