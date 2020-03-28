@@ -1,0 +1,24 @@
+/*matching two numbers - Q1*/
+use std::io;
+fn main(){
+ println!("Your number"); 
+let mut _number1 = String::new();
+io::stdin().read_line(&mut _number1).ok().expect("read error");
+let mut _number2:i8 = _number1.trim().parse().ok().expect("parse error");
+numbercheck(_number2);
+}
+fn numbercheck(num:i8) 
+{
+    println!("Your number");
+    let mut _number3 = String::new();
+    io::stdin().read_line(&mut _number3).ok().expect("read error");
+    let mut _number4:i8 = _number3.trim().parse().ok().expect("parse error");
+    if num==_number4
+    {
+      println!("Matched"); 
+    }
+    else
+    {
+     println!("Not matched"); 
+    }
+}
